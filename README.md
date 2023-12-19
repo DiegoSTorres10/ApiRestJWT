@@ -77,9 +77,14 @@ Subsequently, we must send the data in the body: FullName, Phone, Email, Address
 ## Update Customer
 To update, the first step must be carried out, which is to place the token, then in the api address, place the client ID, and send the new data (FullName, Phone, Email, Address (Optional)
 
+[![UpdateCustomer](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/UpdateCustomer.png "UpdateCustomer")](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/UpdateCustomer.png "UpdateCustomer")
+
 
 ## Delete Customer
 To delete, you must perform the first step, which is to place the token, then in the api address, enter the client ID, and if everything goes well, it will send you an elimination message.
+
+[![DeleteCustomer](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/DeletedCustomer.png "DeleteCustomer")](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/DeletedCustomer.png "DeleteCustomer")
+
 
 ## Local Development:
 - php artisan serve
@@ -88,3 +93,4 @@ To delete, you must perform the first step, which is to place the token, then in
 
 ## Production:
  URL here.
+
