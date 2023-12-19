@@ -1,66 +1,90 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ApiRestJWT
+## Overview
+ApiRestJWT is a RESTful API built with Laravel 10 and utilizes the JWT (JSON Web Tokens) technology. The primary purpose of this API is to provide secure access to customer data.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Usage
 
-## About Laravel
+- git clone https://github.com/DiegoSTorres10/ApiRestJWT.git
+- cd ApiRestJWT
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+#### Configure the Environment:
+Copy the .env.example file to .env and configure the necessary settings, including the database connection and application key.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- cp .env.example .env
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+#### Install Dependencies:
 
-## Learning Laravel
+```
+composer install
+php artisan key:generate
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## API Endpoints
+| ** Method **  | ** Description**   | ** Path **   |  ** Authentication **   |
+| ------------ | ------------ | ------------ | ------------ |
+|  POST | Enter the API   | api/v1/login   | No   |
+| POST  |  Resgiter to API  | api/v1/register   | No  |
+|  POST |  Logout  | api/v1/logout	   | Yes   |
+| POST  | Information the user   | api/v1/get-user	   |  Yes  |
+| GET   | All Customers  | api/v1/customers  | No  |
+|  GET | Show Customer  |  api/v1/customers/{id}/show  | No  |
+|  POST |  Create Customer | api/v1/customers/register   | Yes  |
+|  PUT | Update Customer   | api/v1/customers/{id}  | Yes   |
+| Delete  | Delete Customer   | api/v1/customers/{id}/delete   | Yes   |
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## Registration process
+To register you must put in postman (or some other program of your choice) in the body in json: name, email and password. If everything goes well, the token of the created user will be returned to you.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+[![Register](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Register.png "Register")](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Register.png "Register")
 
-### Premium Partners
+## Login Process
+To log in you must provide the email and password, and if everything goes well, the token is returned
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+[![Login](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Login.png "Login")](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Login.png "Login")
 
-## Contributing
+## Logout Process
+To log out you must send the token
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+[![Logout](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Logout.png "Logout")](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Logout.png "Logout")
 
-## Code of Conduct
+## Get-user
+To obtain the user's data, the token must be sent and the user's information returned.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+[![get-user](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Get-user.png "get-user")](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Get-user.png "get-user")
 
-## Security Vulnerabilities
+## Show all customers
+In this case we only have to put the API address and in the get method, so that it shows us all the registered customers
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+[![Show all customers](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Customers.png "Show all customers")](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Customers.png "Show all customers")
 
-## License
+## Show a specific Customer 
+To see only one client, you must make the appropriate get request without a body in the request.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+[![ShowCusotmer](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/ShowCustomer.png "ShowCusotmer")](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/ShowCustomer.png "ShowCusotmer")
+
+
+## New Customer
+First we must enter the token that is given to us when logging in to make this request
+
+[![Parte1Register](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Part1RegisterCustomer.png "Parte1Register")](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Part1RegisterCustomer.png "Parte1Register")
+
+Subsequently, we must send the data in the body: FullName, Phone, Email, Address (Optional)
+
+[![Parte2Register](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Part2RegisterCustomer.png "Parte2Register")](https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Part2RegisterCustomer.png "Parte2Register")
+
+## Update Customer
+To update, the first step must be carried out, which is to place the token, then in the api address, place the client ID, and send the new data (FullName, Phone, Email, Address (Optional)
+
+
+## Delete Customer
+To delete, you must perform the first step, which is to place the token, then in the api address, enter the client ID, and if everything goes well, it will send you an elimination message.
+
+## Local Development:
+- php artisan serve
+- http://localhost:80001
+
+
+## Production:
+ URL here.

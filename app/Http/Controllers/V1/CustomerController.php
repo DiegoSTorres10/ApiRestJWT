@@ -99,11 +99,11 @@ class CustomerController extends Controller
     {
         //Validación de datos
         $data =  $request->only('FullName', 'Email', 'Phone', 'Address');
-        $validator = Customer::create([
-            'FullName' => $request->FullName,
-            'Email' => $request->Email,
-            'Phone' => $request->Phone,
-            'Address' => $request->Address,
+        $validator = Validator::make($request->all(), [
+            'FullName' => 'required|string|max:255',
+            'Email' => 'required|email|unique:customers,email,' . $id,
+            'Phone' => 'required|string|max:20',
+            'Address' => 'required|string|max:255',
         ]);
         //Si falla la validación error.
         if ($validator->fails()) {
