@@ -20,5 +20,6 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         \App\Models\Customer::factory(10)->create();
+        $this->call(UserSeeder::class);
     }
 }
