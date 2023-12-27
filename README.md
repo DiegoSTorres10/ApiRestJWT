@@ -102,3 +102,8 @@ To delete, you must perform the first step, which is to place the token, then in
 ## Production:
 
 URL here.
+
+## User
+
+-   email: diegostorres10@gmail.com
+-   password: 12345678
