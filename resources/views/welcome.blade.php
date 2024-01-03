@@ -8,84 +8,104 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
 </head>
 
-<body style="background-color: blanchedalmond;">
-    <div class="container mt-5">
-        <h1>Bienvenido a ApiRestJWT</h1>
-        <h2 class="text-center font-weight-bold">Para utilizarlo es hacer apijswt.torreswebdev.com/api/v1</h2>
+<body style="background: linear-gradient(to right, #dcdcdc, #808080);">
+    <div class="container-fluid px-5 mt-5">
+        <h1 class="text-center font-weight-bold">Bienvenido a ApiRestJWT</h1>
+        <p class="mt-2 fs-3">Este proyecto esta realizado con Laravel + JWT el cual consta de una una APIRestFull que
+            contiene datos
+            de clientes para su uso, para ello algunas funciones son necesarias la autenticacion y otras no a
+            continuación se presenta una tabla con las respectivas rutas con los metodos. Para su uso en la red debes
+            colcoar apijst.torreswebdev.com + la ruta que gustes hacer, y si te gustaría tener esta API en tu
+            computadora local visita mi GitHub Haga clic <a href="https://github.com/DiegoSTorres10/ApiRestJWT"
+                target="_blank">aquí</a> para acceder al repositorio. <br>
+            A continuación se presenta una tabla con los metodos, una descripción, la ruta necesaria y si necesita
+            autenticacion de la API
+            Si no puede crear un nuevo usuario utilizar:
+            *email: diegostorres10@gmail.com
+            *password: 12345678
+        </p>
 
-        <table class="table table-bordered my-3">
-            <thead class="table-primary">
-                <tr>
-                    <th>Método</th>
-                    <th>Descripción</th>
-                    <th>Ruta</th>
-                    <th>Autenticación</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>POST</td>
-                    <td>Entrar a la API</td>
-                    <td>api/v1/login</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>POST</td>
-                    <td>Registrar en la API</td>
-                    <td>api/v1/register</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>POST</td>
-                    <td>Cerrar sesión</td>
-                    <td>api/v1/logout</td>
-                    <td>Sí</td>
-                </tr>
-                <tr>
-                    <td>POST</td>
-                    <td>Información del usuario</td>
-                    <td>api/v1/get-user</td>
-                    <td>Sí</td>
-                </tr>
-                <tr>
-                    <td>GET</td>
-                    <td>Todos los clientes</td>
-                    <td>api/v1/customers</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>GET</td>
-                    <td>Mostrar cliente</td>
-                    <td>api/v1/customers/{id}/show</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>POST</td>
-                    <td>Crear cliente</td>
-                    <td>api/v1/customers/register</td>
-                    <td>Sí</td>
-                </tr>
-                <tr>
-                    <td>PUT</td>
-                    <td>Actualizar cliente</td>
-                    <td>api/v1/customers/{id}</td>
-                    <td>Sí</td>
-                </tr>
-                <tr>
-                    <td>Delete</td>
-                    <td>Eliminar cliente</td>
-                    <td>api/v1/customers/{id}/delete</td>
-                    <td>Sí</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="container mt-2">
+            <div class="table-responsive">
+                <table class="table table-bordered my-3 mb-5">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Método</th>
+                            <th>Descripción</th>
+                            <th>Ruta</th>
+                            <th>Autenticación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>POST</td>
+                            <td>Entrar a la API</td>
+                            <td>api/v1/login</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>POST</td>
+                            <td>Registrar en la API</td>
+                            <td>api/v1/register</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>POST</td>
+                            <td>Cerrar sesión</td>
+                            <td>api/v1/logout</td>
+                            <td>Sí</td>
+                        </tr>
+                        <tr>
+                            <td>POST</td>
+                            <td>Información del usuario</td>
+                            <td>api/v1/get-user</td>
+                            <td>Sí</td>
+                        </tr>
+                        <tr>
+                            <td>GET</td>
+                            <td>Todos los clientes</td>
+                            <td>api/v1/customers</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>GET</td>
+                            <td>Mostrar cliente</td>
+                            <td>api/v1/customers/{id}/show</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>POST</td>
+                            <td>Crear cliente</td>
+                            <td>api/v1/customers/register</td>
+                            <td>Sí</td>
+                        </tr>
+                        <tr>
+                            <td>PUT</td>
+                            <td>Actualizar cliente</td>
+                            <td>api/v1/customers/{id}</td>
+                            <td>Sí</td>
+                        </tr>
+                        <tr>
+                            <td>Delete</td>
+                            <td>Eliminar cliente</td>
+                            <td>api/v1/customers/{id}/delete</td>
+                            <td>Sí</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
+        <p class="mt-2 fs-3">
+            Se recomienda utilizar Postman para realizar las peticiones. A continuación se presenta una serie de
+            capturas para el proceso de los metodos
+        </p>
         <!-- Registro -->
         <div class="card mb-5">
             <img src="https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Register.png"
                 class="card-img-top" alt="Registro">
             <div class="card-body">
-                <h5 class="card-title">Registro</h5>
+
                 <h4 class="card-title">Registro</h4>
                 <p class="card-text">Para registrarte, utiliza Postman o un programa similar y envía un JSON con campos:
                     name, email y password.</p>
@@ -93,7 +113,7 @@
         </div>
 
         <!-- Login -->
-        <div class="card mb-3">
+        <div class="card mb-5">
             <img src="https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Login.png"
                 class="card-img-top" alt="Login">
             <div class="card-body">
@@ -104,7 +124,7 @@
         </div>
 
         <!-- Logout -->
-        <div class="card mb-3">
+        <div class="card mb-5">
             <img src="https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Logout.png"
                 class="card-img-top" alt="Logout">
             <div class="card-body">
@@ -114,7 +134,7 @@
         </div>
 
         <!-- get-user -->
-        <div class="card mb-3">
+        <div class="card mb-5">
             <img src="https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Get-user.png"
                 class="card-img-top" alt="Get User">
             <div class="card-body">
@@ -125,7 +145,7 @@
         </div>
 
         <!-- Mostrar todos los clientes -->
-        <div class="card mb-3">
+        <div class="card mb-5">
             <img src="https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Customers.png"
                 class="card-img-top" alt="Mostrar todos los clientes">
             <div class="card-body">
@@ -136,7 +156,7 @@
         </div>
 
         <!-- Mostrar un cliente específico -->
-        <div class="card mb-3">
+        <div class="card mb-5">
             <img src="https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/ShowCustomer.png"
                 class="card-img-top" alt="Mostrar un cliente específico">
             <div class="card-body">
@@ -147,7 +167,7 @@
         </div>
 
         <!-- Nuevo cliente -->
-        <div class="card mb-3">
+        <div class="card mb-5">
             <img src="https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Part1RegisterCustomer.png"
                 class="card-img-top" alt="Nuevo Cliente - Parte 1">
             <div class="card-body">
@@ -157,7 +177,7 @@
             </div>
         </div>
 
-        <div class="card mb-3">
+        <div class="card mb-5">
             <img src="https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/Part2RegisterCustomer.png"
                 class="card-img-top" alt="Nuevo Cliente - Parte 2">
             <div class="card-body">
@@ -168,7 +188,7 @@
         </div>
 
         <!-- Actualizar Cliente -->
-        <div class="card mb-3">
+        <div class="card mb-5">
             <img src="https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/UpdateCustomer.png"
                 class="card-img-top" alt="Actualizar Cliente">
             <div class="card-body">
@@ -179,7 +199,7 @@
         </div>
 
         <!-- Eliminar Cliente -->
-        <div class="card mb-3">
+        <div class="card mb-5">
             <img src="https://raw.githubusercontent.com/DiegoSTorres10/ApiRestJWT/main/public/images/DeletedCustomer.png"
                 class="card-img-top" alt="Eliminar Cliente">
             <div class="card-body">
