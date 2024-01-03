@@ -28,6 +28,12 @@ class AuthController extends Controller
         if ($validator->fails()) {
             return response()->json(['error' => $validator->messages()], 400);
         }
+
+        $user = User::all();
+        if ($user->count() == 5) {
+            return response()->json(['error' => "Cannot add more user"], 400);
+        } 
+
         //Creamos el nuevo usuario
         $user = User::create([
             'name' => $request->name,

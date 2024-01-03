@@ -109,6 +109,8 @@ class CustomerController extends Controller
         if ($validator->fails()) {
             return response()->json(['error' => $validator->messages()], 400);
         }
+
+        
         //Buscamos el customer
         $customer = Customer::findOrfail($id);
         //Actualizamos el customer.
@@ -136,6 +138,10 @@ class CustomerController extends Controller
     {
         //Buscamos el customer
         $customer = Customer::findOrfail($id);
+        $CustomerAll = Customer::all();
+        if ($CustomerAll->count() == 2) {
+            return response()->json(['error' => "Cannot delete more customers"], 400);
+        } 
         //Eliminamos el customer
         $customer->delete();
         //Devolvemos la respuesta
