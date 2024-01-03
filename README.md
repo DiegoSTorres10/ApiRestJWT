@@ -20,6 +20,7 @@ Copy the .env.example file to .env and configure the necessary settings, includi
 ```
 composer install
 php artisan key:generate
+php artisan jwt:secret
 ```
 
 ## API Endpoints
