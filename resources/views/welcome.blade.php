@@ -14,14 +14,17 @@
         <p class="mt-2 fs-3">Este proyecto esta realizado con Laravel + JWT el cual consta de una una APIRestFull que
             contiene datos
             de clientes para su uso, para ello algunas funciones son necesarias la autenticacion y otras no a
-            continuación se presenta una tabla con las respectivas rutas con los metodos. Para su uso en la red debes
-            colcoar apijst.torreswebdev.com + la ruta que gustes hacer, y si te gustaría tener esta API en tu
+            continuación se presenta una tabla con las respectivas rutas con los metodos.
+            <br>
+            <strong>Para su uso en la red debes
+                colocar apijst.torreswebdev.com + la ruta que gustes hacer</strong>. <br> y si te gustaría tener esta API
+            en tu
             computadora local visita mi GitHub Haga clic <a href="https://github.com/DiegoSTorres10/ApiRestJWT"
                 target="_blank">aquí</a> para acceder al repositorio. <br>
             A continuación se presenta una tabla con los metodos, una descripción, la ruta necesaria y si necesita
             autenticacion de la API
-            Si no puede crear un nuevo usuario utilizar:
-            *email: diegostorres10@gmail.com
+            Si no puede crear un nuevo usuario utilizar: <br>
+            *email: diegostorres10@gmail.com <br>
             *password: 12345678
         </p>
 
